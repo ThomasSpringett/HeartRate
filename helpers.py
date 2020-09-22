@@ -43,3 +43,17 @@ def restart():
     pca2 = pickle.load(open('pca_robust_10', 'rb'))
     Xpca25 = pickle.load(open("Xpca10", 'rb'))
     return azdias_clean, pca10, Xpca10
+
+class Limits1: 
+    
+    def __init__(self,cdc_moderate_low):
+        self.cdc_moderate_low = cdc_moderate_low
+
+class Limits2: 
+    
+    def __init__(self,cdc_moderate_low):
+        self.cdc_moderate_low = cdc_moderate_low
+class Limits5: 
+    
+    def __init__(self,cdc_moderate_low):
+        self.cdc_moderate_low = cdc_moderate_low
