@@ -45,6 +45,15 @@ def restart():
     return azdias_clean, pca10, Xpca10
 
 
+def clusterCounts(labels): 
+    # The function below calculates the percent of the distribution in each cluster. 
+
+    clusterDict = collections.Counter(labels)
+    clusterSum = sum(clusterDict.values())
+
+    for key,value in sorted(clusterDict.items()): 
+        print (key +1, ' ->',np.round(100*value/clusterSum),'%')
+
 
 
 def findK(df,limit): 
