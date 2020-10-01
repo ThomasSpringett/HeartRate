@@ -44,16 +44,28 @@ def restart():
     Xpca25 = pickle.load(open("Xpca10", 'rb'))
     return azdias_clean, pca10, Xpca10
 
-class Limits1: 
-    
-    def __init__(self,cdc_moderate_low):
-        self.cdc_moderate_low = cdc_moderate_low
 
-class Limits2: 
+
+
+def findK(df,limit): 
     
-    def __init__(self,cdc_moderate_low):
-        self.cdc_moderate_low = cdc_moderate_low
-class Limits5: 
-    
-    def __init__(self,cdc_moderate_low):
-        self.cdc_moderate_low = cdc_moderate_low
+    # The elbow method would suggest that most of the improvement in the cluster scores happens prior to k=5.
+    # The algorithm below allows for selection of k based on the diminishing benefits of increasing clusters. 
+    # 5 clusters is being chosen, not just by the elbow method above as it also matches up with the 5 zones 
+    # defined by the Polar (tm) methodology. 
+
+    for k in range(len(df)):
+        if k == len(df):
+           print ("\nEnd of array reached.") 
+        elif k == len(df): 
+          improvement = 'None'
+          print ("end of array reached prior to limit")
+          print ("K=0")
+        elif k > 0:
+          improvement = (round(100*((df[k-1]-df[k])/df[k-1])))
+          #print (k,round(df[k]/100000000,2),improvement)
+          if improvement < limit:
+                #print ("Improvement of {}% is less than lower limit of {}% for k = {}. k max is {} ".format(improvement,limit,k,len(df)))
+                break
+    print ("Maximum value of number of clusters (k) is: ",len(df))
+    print ("Less than {}% improvement in score after k = {}".format(limit,k))
