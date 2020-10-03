@@ -13,15 +13,10 @@ After the maximum heart rate is determined, target heart rates can be determined
 ### Hear Rate Intensity Zones
 
 #### CDC
-The CDC defines zones as follows: 
-* Target Heart Rate is 64% to 76%. CDC. 
-* High Intensity target heart rate is 76-93% (CDC). Or 120 to 146 for the 62 year old. 
+The CDC defines zones as follows: Target Heart Rate is 64% to 76%. High Intensity target heart rate is 76-93% (CDC). Or 120 to 146 for the 62 year old. 
 
 #### MayoClinic
-The Mayo Clinic defines 
-
-1. Moderate intensity as 50-70% of maximum heart rate.
-2. Vigorous as 70% to 85%.
+The Mayo Clinic defines moderate intensity as 50-70% of maximum heart rate and vigorous as 70% to 85%.
 
 #### Polar
 The heart rate monitor company Polar suggests 5 heart rate zones:
@@ -30,6 +25,4 @@ The heart rate monitor company Polar suggests 5 heart rate zones:
 2. Light 60-70%. Improve general endurance and increase capillary density.
 2. Moderate at 70-80%. Lactic acid build up,improve efficiency of blood circulation in the heart and muscles
 4. Hard 80-90%. Improve speed endurance.
-5. Maximum 90-100%. For elite atheletes to further improve speed. 
-
-The code below will assign new columns in the dataset that categorize the heart rate into the zones covered above: 
+5. Maximum 90-100%. For elite atheletes to further improve speed.
