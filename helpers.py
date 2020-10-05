@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from collections import Counter
 
     
 def oftype(x):
@@ -47,7 +48,7 @@ def restart():
 
 def clusterCounts(labels): 
     # The function below calculates the percent of the distribution in each cluster. 
-
+    from collections import Counter
     clusterDict = collections.Counter(labels)
     clusterSum = sum(clusterDict.values())
 
